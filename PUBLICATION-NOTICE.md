@@ -1,12 +1,12 @@
 # Publication notice
 
-This isolated branch prepares a sanitized historical demonstration package. It is not published and has no configured public remote.
+This repository preserves a sanitized historical demonstration snapshot of the experimental Keyhole project. Its public destination is [mrgyatso/keyhole-demo](https://github.com/mrgyatso/keyhole-demo).
 
 ## Provenance
 
 - Source baseline: `5490dd418767ddbfe27c1f10bbeb091e315eab68` (`consent/integration` historical snapshot)
 - Demo-only commit: `b94f85a165faf3b158e89fbb333547098a4ed729`
-- Publication branch: `publication/keyhole-historical-demo`
+- The publication was prepared in an isolated branch and exported into a new history. Original private commits, branches and working trees remain preserved separately.
 
 The current feature work is intentionally excluded. At package preparation, `consent/signin` was 35 commits ahead of the baseline and had local uncommitted diagnostic changes; the command-runner branch had four commits not in the baseline. The installer commit is contained in the newer sign-in line. None of that work is represented by this package's tests or claims.
 
@@ -16,9 +16,8 @@ This branch removes deployment configuration, installer scripts, operational run
 
 The owner selected the MIT License for Zachary Woods's original Keyhole code. The added LICENSE and THIRD-PARTY-NOTICES.md keep that grant distinct from third-party dependency terms.
 
-## Release decisions still required
+## Snapshot lifecycle
 
-1. The owner must review this branch's diff and decide whether the historical source may be made public.
-2. Newer feature work needs an independent clean-baseline, reconciliation, and acceptance pass before any current-feature publication claim.
+The owner authorized publication and selected MIT for the original source. This historical demonstration snapshot is frozen; it has no maintenance or support commitment. The Keyhole project has newer work outside this snapshot, so this notice does not declare that project ended.
 
-Until those decisions are complete, share only the local demo output and these source materials with the owner or reviewers authorized to see them.
+Newer feature work needs its own selected baseline and acceptance results before it can be represented as a current release. The tests and recorded transcript here apply to the stated historical fixture only.
