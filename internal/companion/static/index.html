@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Keyhole</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/webauthn.js" defer></script>
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <span class="brand">Keyhole</span>
+    <span class="who" id="who"></span>
+    <button type="button" class="link" id="signout" hidden>Sign out</button>
+  </header>
+  <main>
+    <p class="banner" id="banner" role="status" hidden></p>
+    <p class="notice" id="notice" role="status" hidden></p>
+    <noscript><p class="banner">Keyhole needs JavaScript to use your passkey.</p></noscript>
+
+    <section class="panel" id="signin" hidden>
+      <h1>Sign in</h1>
+      <p>Use the passkey you enrolled for Keyhole. Your device asks for Touch ID, Face ID or your PIN.</p>
+      <button type="button" class="primary" id="signin-btn">Sign in with passkey</button>
+      <p class="message" id="signin-msg" role="alert"></p>
+    </section>
+
+    <div id="app" hidden>
+      <section aria-labelledby="h-active" id="active-section" hidden>
+        <h2 id="h-active">Unlocked</h2>
+        <div id="active"></div>
+      </section>
+      <section aria-labelledby="h-pending">
+        <h2 id="h-pending">Waiting for you</h2>
+        <div id="pending"></div>
+        <p class="empty" id="pending-empty">Nothing is waiting for your approval.</p>
+      </section>
+      <section aria-labelledby="h-activity" id="activity-section" hidden>
+        <h2 id="h-activity">Recent activity</h2>
+        <ol class="activity" id="activity"></ol>
+      </section>
+      <section aria-labelledby="h-done" id="done-section" hidden>
+        <h2 id="h-done">Changes in the last 24 hours</h2>
+        <div id="done"></div>
+      </section>
+      <section aria-labelledby="h-history" id="history-section" hidden>
+        <h2 id="h-history">Unlocks ended in the last 24 hours</h2>
+        <div id="history"></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Enroll a passkey · Keyhole</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/webauthn.js" defer></script>
+  <script src="/static/enroll.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <span class="brand">Keyhole</span>
+  </header>
+  <main>
+    <noscript><p class="banner">Keyhole needs JavaScript to create your passkey.</p></noscript>
+    <section class="panel" id="enroll">
+      <h1>Enroll a passkey</h1>
+      <p>This one-time link creates the passkey you sign in to Keyhole with. Once signed in, you unlock clients and approve changes without being asked for it again until the sign-in ends.
+        Create it on a phone or computer that only you use.</p>
+      <label for="name">Name this passkey</label>
+      <input id="name" type="text" maxlength="64" autocomplete="off" placeholder="e.g. MacBook Touch ID">
+      <button type="button" class="primary" id="enroll-btn">Create passkey</button>
+      <p class="message" id="enroll-msg" role="alert"></p>
+    </section>
+    <section class="panel" id="enrolled" hidden>
+      <h1>Passkey enrolled</h1>
+      <p id="enrolled-text"></p>
+      <a class="button primary" href="/">Open Keyhole</a>
+    </section>
+  </main>
+</body>
+</html>

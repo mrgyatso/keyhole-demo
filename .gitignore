@@ -1,0 +1,14 @@
+/bin/
+/dist/
+*.creds
+*.nk
+*.seed
+*.db
+*.db-wal
+*.db-shm
+.env
+*.env
+/deploy/secrets/
+.DS_Store
+
+/.claude/worktrees/
